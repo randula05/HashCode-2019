@@ -90,16 +90,16 @@ int main(){
 
 
     // Test
-    cout<<endl;
-    cout<<count<<endl;
+    ofstream ofile("output.txt");
+    ofile<<count<<endl;
     ptr=start;
     while(ptr!=NULL){
         if(ptr->hv=='H'){
-            cout<<ptr->id[0];
+            ofile<<ptr->id[0];
             if(ptr->id[1]){
-                cout<<" "<<ptr->id[1];
+                ofile<<" "<<ptr->id[1];
             }
-            cout<<endl;
+            ofile<<endl;
         }
         ptr=ptr->next;
     }
