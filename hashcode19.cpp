@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 typedef struct photo{
@@ -12,16 +13,17 @@ typedef struct photo{
 photo *start=NULL;
 
 int main(){
+    ifstream file("a_example.txt");
     int n;
-    cin>>n;
+    file>>n;
     for(int i=0;i<n;i++){
         photo *p=new photo;
         p->id=i;
-        cin>>p->hv>>p->tagCount;
+        file>>p->hv>>p->tagCount;
         p->v=-1;
         string s;
         for(int i=0;i<p->tagCount;i++){
-            cin>>s;
+            file>>s;
             p->v++;
             p->tags[p->v]=s;
         }
