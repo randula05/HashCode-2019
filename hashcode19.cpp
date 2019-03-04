@@ -7,14 +7,14 @@ typedef struct photo{
     char hv;
     int tagCount;
     int v;
-    string tags[100000];
+    string tags[100];
     struct photo *next;
 }photo;
 photo *start=NULL;
 
 int main(){
     // Input file
-    ifstream file("a_example.txt");
+    ifstream file("e_shiny_selfies.txt");
 
     // Assign variables
     int n;
@@ -89,8 +89,8 @@ int main(){
 
 
 
-    // Test
-    ofstream ofile("output.txt");
+    // Save output file
+    ofstream ofile("output5.txt");
     ofile<<count<<endl;
     ptr=start;
     while(ptr!=NULL){
