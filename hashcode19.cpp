@@ -11,7 +11,6 @@ typedef struct photo{
 }photo;
 photo *start=NULL;
 
-
 int main(){
     int n;
     cin>>n;
