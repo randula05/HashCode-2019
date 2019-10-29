@@ -109,6 +109,7 @@ int main(){
                 
                 for(int j = 0; j < ptr2->tagCount; j++){
                     cout<<ptr->tags[i]<<" "<<ptr2->tags[j]<<" "<<i<<" "<<j<<endl;
+                    cout << "get image"<<end;
                     if(ptr->tags[i]==ptr2->tags[j]){
                         f=1;
                     }
